@@ -253,6 +253,9 @@ def player_lose(i = 0, hand_number = ""):
     return
  
 # Main game functions
+def coins_left():
+    return COINS["stack"] > 0;
+
 def begin_round():
     print("Beginning new round.");
     if len(DECK) < MIN_CARDS_LEFT:

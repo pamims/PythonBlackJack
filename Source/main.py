@@ -1,11 +1,13 @@
 from ascii_art import blackjack_art
-from blackjack import begin_round, get_player_decision, dealer_plays, end_round
+from blackjack import begin_round, get_player_decision, dealer_plays, end_round, coins_left
 
 
 print(blackjack_art);
 print("\nWelcome to BlackJack!\n");
 
 def get_game_over():
+    if not coins_left():
+        return True;
     yes_no = {"y" : False, "n" : True};
     decision = "";
     while decision not in yes_no:
